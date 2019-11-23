@@ -66,15 +66,6 @@ public class GenerateGrid : MonoBehaviour
 
     }
 
-
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        
-
-    }
-
     public int GetNumberOfTiles()
     {
         return total;
