@@ -34,7 +34,7 @@ public class fireBall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if(time > charge*2.5)
+        if(time > charge*2.5 && collision.name.Contains("Tile"))
         {
             if (collision.name == "Tile(Clone)")
             {
@@ -43,7 +43,7 @@ public class fireBall : MonoBehaviour
                 TileTrigger mygrid = collision.GetComponent<TileTrigger>();
                 mygrid.disableTile();
 
-                Instantiate(burningPrefab, new Vector3(collision.transform.position.x, collision.transform.position.y, 0), Quaternion.identity);
+                Instantiate(burningPrefab, new Vector3(collision.transform.position.x, collision.transform.position.y, -1), Quaternion.identity);
 
                 Destroy(gameObject);
             }
