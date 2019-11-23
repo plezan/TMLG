@@ -6,6 +6,10 @@ public class BuringGrowth : MonoBehaviour
 {
     public float time = 0;
     public string tileName = "Tile(Clone)";
+    public string wallNName = "NorthWall";
+    public string wallSName = "SouthWall";
+    public string wallWName = "WestWall";
+    public string wallEName = "EastWall";
     private bool isBurning = true;
 
     // Start is called before the first frame update
@@ -33,6 +37,10 @@ public class BuringGrowth : MonoBehaviour
         {
             TileTrigger mygrid = collision.GetComponent<TileTrigger>();
             mygrid.disableTile();
+        }
+        if (collision.name == wallEName || collision.name == wallNName || collision.name == wallSName || collision.name == wallWName)
+        {
+            isBurning = false;
         }
     }
 
