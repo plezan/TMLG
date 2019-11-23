@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7d80f7a6727fba340a67fab5a7bbd22e
+=======
+guid: ebccf4970c2c0be43afb895612d4ce1b
+>>>>>>> First release of platform generator
 TextScriptImporter:
   externalObjects: {}
   userData: 
