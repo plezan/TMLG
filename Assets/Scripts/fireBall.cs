@@ -43,7 +43,7 @@ public class fireBall : MonoBehaviour
                 TileTrigger mygrid = collision.GetComponent<TileTrigger>();
                 mygrid.disableTile();
 
-                Instantiate(burningPrefab, new Vector3(collision.transform.position.x, collision.transform.position.y, 0), Quaternion.identity);
+                Instantiate(burningPrefab, new Vector3(collision.transform.position.x, collision.transform.position.y, -1), Quaternion.identity);
 
                 Destroy(gameObject);
             }

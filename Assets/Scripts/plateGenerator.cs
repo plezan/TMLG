@@ -27,7 +27,7 @@ public class plateGenerator : MonoBehaviour
         clone.name = plateName;
         int x = Random.Range(minX, maxX) + (int) _self.transform.position.x;
         int y = Random.Range(minY, maxY);
-        float z = -0.5f;
+        float z = -5f;
         clone.transform.position = new Vector3(x, y, z);
         return clone;
     }
