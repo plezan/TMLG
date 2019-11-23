@@ -8,6 +8,9 @@ public class fireBall : MonoBehaviour
     public Rigidbody2D rb;
     public float charge;
     public float time = 0;
+    public GameObject burningPrefab;
+
+
     // Start is called before the first frame update
     public void SetTime (float charging)
     {
@@ -33,10 +36,17 @@ public class fireBall : MonoBehaviour
         
         if(time > charge*2.5)
         {
-            Debug.Log(collision);
-            TileTrigger mygrid = collision.GetComponent<TileTrigger>();
-            mygrid.disableTile();
-            Destroy(gameObject);
+            if (collision.name == "Tile(Clone)")
+            {
+
+                // Debug.Log("vtore collision name " + collision);
+                TileTrigger mygrid = collision.GetComponent<TileTrigger>();
+                mygrid.disableTile();
+
+                Instantiate(burningPrefab, new Vector3(collision.transform.position.x, collision.transform.position.y, 0), Quaternion.identity);
+
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HEIGHTOFGRID: 10
-  WIDTHOFGRID: 20
+  WIDTHOFGRID: 18
   HEIGHTOFTILE: 0.4
   WIDTHOFTILE: 0.4
   tilePrefab: {fileID: 3752664134151971949, guid: 2704b45e2bed67f41b3d18e51bfd8825,
