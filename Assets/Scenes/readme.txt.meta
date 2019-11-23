@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: c0d82fd8c130fe5479acfebc4564b2c1
 =======
 guid: 4d31c1b111690674b8a8e8d76e51d56b
@@ -16,6 +17,9 @@ guid: 3632173b8ff730e4fb053add995b614d
 guid: c0d82fd8c130fe5479acfebc4564b2c1
 >>>>>>> Stashed changes
 >>>>>>> Amir
+=======
+guid: ac01312c538734946a8971eaa18030e1
+>>>>>>> default
 TextScriptImporter:
   externalObjects: {}
   userData: 
