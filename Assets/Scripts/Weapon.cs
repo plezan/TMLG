@@ -5,17 +5,27 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Transform fireShoot;
-    public Vector2 fireSpeed;
     public GameObject fireBallPrefab;
+    public Transform waterShoot;
+    public GameObject waterShielPrefab;
     public float charge = 0;
     public bool chargingBall= false;
-    public string key;
+    public string fireKey;
+    public string waterKey;
+
     void Shoot(float Charging)
     {
 
-        var fireball = Instantiate(fireBallPrefab,fireShoot.position,fireShoot.rotation);
+        var fireball = Instantiate(fireBallPrefab, fireShoot.position, fireShoot.rotation);
         fireball.GetComponent<fireBall>().SetTime(Charging);
     }
+
+    void Shield()
+    {
+        var obj = Instantiate(waterShielPrefab, waterShoot.position, waterShoot.rotation);
+        obj.transform.SetParent(gameObject.transform);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -23,16 +33,20 @@ public class Weapon : MonoBehaviour
         {
             charge += Time.deltaTime;
         }
-        if(Input.GetButtonDown(key))
+        if(Input.GetButtonDown(fireKey))
         {
             charge += Time.deltaTime;
             chargingBall = true;
         }
-        if (Input.GetButtonUp(key))
+        if (Input.GetButtonUp(fireKey))
         {
             chargingBall = false;
             Shoot(charge);
             charge = 0;
+        }
+        if (Input.GetButtonDown(waterKey))
+        {
+            Shield();
         }
     }
 }

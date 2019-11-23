@@ -36,13 +36,11 @@ public class BuringGrowth : MonoBehaviour
         }
     }
 
-    /*
     public void PutOutOFBurning()
     {
-        isBurning = false;
-        gameObject.GetComponent<BoxCollider2D>()
+        Destroy(gameObject);
     }
-    */
+    
 
 
 }
