@@ -24,8 +24,10 @@ public class SpawnController : MonoBehaviour
             pc.VerticalAxis = "p"+(i+1)+"_Vertical";
 
             Weapon wp = players[i].GetComponent<Weapon>();
-            wp.key = "p" + (i + 1) + "_Action1";
+            wp.fireKey = "p" + (i + 1) + "_Action1";
+            wp.waterKey = "p" + (i + 1) + "_Action2";
             wp.fireShoot = players[i].transform.GetChild(0).gameObject.transform;
+            wp.waterShoot = players[i].transform.GetChild(1).gameObject.transform;
         }
     }
 }

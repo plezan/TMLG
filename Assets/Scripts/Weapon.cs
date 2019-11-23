@@ -10,22 +10,13 @@ public class Weapon : MonoBehaviour
     public GameObject waterShielPrefab;
     public float charge = 0;
     public bool chargingBall= false;
-<<<<<<< HEAD
-    public string key;
-
-    void Shoot(float Charging)
-    {
-        fireShoot.SetPositionAndRotation(new Vector3(fireShoot.position.x, fireShoot.position.y, -10), fireShoot.rotation);
-        var fireball = Instantiate(fireBallPrefab,fireShoot.position,fireShoot.rotation);
-=======
     public string fireKey;
     public string waterKey;
 
     void Shoot(float Charging)
     {
-
+        fireShoot.SetPositionAndRotation(new Vector3(fireShoot.position.x, fireShoot.position.y, -10), fireShoot.rotation);
         var fireball = Instantiate(fireBallPrefab, fireShoot.position, fireShoot.rotation);
->>>>>>> c8bc2d64ec351d38a91f776f87c07980c1b9ffad
         fireball.GetComponent<fireBall>().SetTime(Charging);
     }
 
