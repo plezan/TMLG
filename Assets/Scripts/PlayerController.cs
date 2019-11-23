@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jump;
     public float rayCheckLength;
+    public string HorizontalAxis;
+    public string VerticalAxis;
     Rigidbody2D rb;
 
     void Start()
@@ -18,11 +20,11 @@ public class PlayerController : MonoBehaviour
     {
 
         // horizontal movement
-        float x = Input.GetAxis("Horizontal");
+        float x = Input.GetAxis(HorizontalAxis);
         rb.velocity = new Vector3(x * speed, rb.velocity.y, 0);
 
         // vertical movement
-        if (Input.GetAxis("Jump") > 0 && isGrounded())
+        if (Input.GetAxis(VerticalAxis) > 0 && isGrounded())
         {
             rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
         }
