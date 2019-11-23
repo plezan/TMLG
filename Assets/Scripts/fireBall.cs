@@ -8,6 +8,9 @@ public class fireBall : MonoBehaviour
     public Rigidbody2D rb;
     public float charge;
     public float time = 0;
+    public GameObject buringPrefab;
+
+
     // Start is called before the first frame update
     public void SetTime (float charging)
     {
@@ -36,6 +39,9 @@ public class fireBall : MonoBehaviour
             Debug.Log(collision);
             TileTrigger mygrid = collision.GetComponent<TileTrigger>();
             mygrid.disableTile();
+
+            Instantiate(buringPrefab, new Vector3(collision.transform.position.x, collision.transform.position.y, 0), Quaternion.identity);
+
             Destroy(gameObject);
         }
     }

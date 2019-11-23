@@ -148,7 +148,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.4}
+  m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
 --- !u!114 &3353706349317759756
 MonoBehaviour:
@@ -166,3 +166,5 @@ MonoBehaviour:
   rb: {fileID: 4424963303964405156}
   charge: 0
   time: 0
+  buringPrefab: {fileID: 8074936656967171915, guid: 2ec7d515e4a72a449a69a8c822396b90,
+    type: 3}
