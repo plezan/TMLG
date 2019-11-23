@@ -3,7 +3,11 @@ fileFormatVersion: 2
 guid: 99c8164a12919f145b4bad36446aafde
 =======
 guid: 11ec2c4dee2efd94b8b6b70e28a5f241
+<<<<<<< HEAD
 >>>>>>> First release of platform generator
+=======
+>>>>>>> 1925022b4050baa2d1e85982e33feb8f95a86e1b
+>>>>>>> 659b33634e168754afdfb940c7f23a1b7c74593d
 TextScriptImporter:
   externalObjects: {}
   userData: 
