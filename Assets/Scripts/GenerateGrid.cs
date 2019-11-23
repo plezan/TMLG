@@ -16,6 +16,8 @@ public class GenerateGrid : MonoBehaviour
     public float UPLEFTCORNER_Y = 4.84f;
     const float UPLEFTCORNER_Z = -5.0f;
 
+    bool isActive = true;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -60,12 +62,13 @@ public class GenerateGrid : MonoBehaviour
             return false;
         }
 
+    }
 
 
-        // Update is called once per frame
-        void Update()
-        {
 
-        }
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }
