@@ -120,5 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146c6c09749a9c140a91750e696f3474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireBallPreFab: {fileID: 8307013929751900666, guid: 949c1ad2090d06c419c74e74953f6e76,
+  fireBallPreFab: {fileID: 990684269162142979, guid: 366596222625d714aa024d527652ae14,
     type: 3}
