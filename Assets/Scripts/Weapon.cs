@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     public GameObject fireBallPrefab;
     public float charge = 0;
     public bool chargingBall= false;
+    public string key;
     void Shoot(float Charging)
     {
 
@@ -22,12 +23,12 @@ public class Weapon : MonoBehaviour
         {
             charge += Time.deltaTime;
         }
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown(key))
         {
             charge += Time.deltaTime;
             chargingBall = true;
         }
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp(key))
         {
             chargingBall = false;
             Shoot(charge);

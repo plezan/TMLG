@@ -1127,7 +1127,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1589348989}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1186,6 +1187,7 @@ MonoBehaviour:
     type: 3}
   charge: 0
   chargingBall: 0
+  key: p1_Action1
 --- !u!1 &1434316567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,6 +1415,57 @@ Transform:
   m_Father: {fileID: 235796925}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1589348988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1589348989}
+  - component: {fileID: 1589348990}
+  m_Layer: 0
+  m_Name: GridGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1589348989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589348988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1336362569}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1589348990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589348988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151a3975191afe94abf77456716c0aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HEIGHTOFGRID: 10
+  WIDTHOFGRID: 20
+  HEIGHTOFTILE: 0.4
+  WIDTHOFTILE: 0.4
+  tilePrefab: {fileID: 3752664134151971949, guid: 2704b45e2bed67f41b3d18e51bfd8825,
+    type: 3}
+  UPLEFTCORNER_X: -8.54
+  UPLEFTCORNER_Y: 4.84
 --- !u!1 &1598949219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,6 +1742,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990684269162142985, guid: 366596222625d714aa024d527652ae14,
+        type: 3}
+      propertyPath: HorizontalAxis
+      value: p1_Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 990684269162142985, guid: 366596222625d714aa024d527652ae14,
+        type: 3}
+      propertyPath: VerticalAxis
+      value: p1_Vertical
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366596222625d714aa024d527652ae14, type: 3}
