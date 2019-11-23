@@ -16,9 +16,13 @@ public class GenerateGrid : MonoBehaviour
     public float UPLEFTCORNER_Y = 4.84f;
     const float UPLEFTCORNER_Z = -5.0f;
 
+    int total;
+
     // Start is called before the first frame update
     void Awake()
     {
+
+        total = 0;
 
         // GameObject tile = Instantiate(tilePrefab, new Vector3(UPLEFTCORNER_X, UPLEFTCORNER_Y, UPLEFTCORNER_Z), Quaternion.identity);
         ArrayList currentColumn;
@@ -36,6 +40,7 @@ public class GenerateGrid : MonoBehaviour
                 float newY = UPLEFTCORNER_Y - (currentColumn.Count * WIDTHOFTILE);
                 GameObject tile;
                 currentColumn.Add( tile = Instantiate(tilePrefab, new Vector3(newX, newY, UPLEFTCORNER_Z), Quaternion.identity));
+                total++;
                 tile.transform.parent = gameObject.transform;
             }
 
@@ -64,8 +69,24 @@ public class GenerateGrid : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        
 
     }
+
+    public int GetNumberOfTiles()
+    {
+        return total;
+    }
+
+    public int DecreaseNumberOfTiles()
+    {
+        if (total > 0)
+        {
+            total -= 1;
+        }
+        return total;
+    }
+
 }

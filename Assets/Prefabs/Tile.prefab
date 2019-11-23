@@ -123,4 +123,4 @@ MonoBehaviour:
   fireBallPreFab: {fileID: 990684269162142979, guid: 366596222625d714aa024d527652ae14,
     type: 3}
   isActive: 1
-  propagation: {fileID: 0}
+  burning: {fileID: 8074936656967171915, guid: 2ec7d515e4a72a449a69a8c822396b90, type: 3}

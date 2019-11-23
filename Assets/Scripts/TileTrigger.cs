@@ -7,7 +7,7 @@ public class TileTrigger : MonoBehaviour
 
     public GameObject fireBallPreFab;
     public bool isActive = true;
-    public GameObject propagation;
+    public GameObject burning;
 
     // Start is called before the first frame update
     void Start()
@@ -15,44 +15,25 @@ public class TileTrigger : MonoBehaviour
         
     }
 
-
     public void disableTile()
     {
         isActive = false;
-        Debug.Log(isActive);
     }
 
-
-
-
-    void OnTriggerStay2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (col.name == fireBallPreFab.name)
+        if (collision.name == burning.name+"(Clone)")
         {
             
             print("Triger triggered");
-
-            print(col.name);
+            gameObject.GetComponentInParent<GenerateGrid>().DecreaseNumberOfTiles();
+            Debug.Log(gameObject.GetComponentInParent<GenerateGrid>().GetNumberOfTiles());
+            disableTile();
         }
 
     }
-
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-
-        if (col.name == fireBallPreFab.name)
-        {
-
-            print("Triger triggered");
-
-            print(col.name);
-        }
-
-    }
-
-
+    
     // Update is called once per frame
     void Update()
     {
