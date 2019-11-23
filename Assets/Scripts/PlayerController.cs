@@ -32,8 +32,11 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayCheckLength);
-        return hit.collider != null; 
+        int layer_mask = LayerMask.GetMask("Terrain");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayCheckLength, layer_mask);
+        if (hit.collider == null) return false;
+        //Debug.Log(hit.collider.name);
+        return true; 
     }
 
 }
