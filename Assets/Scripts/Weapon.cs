@@ -10,9 +10,9 @@ public class Weapon : MonoBehaviour
     public float charge = 0;
     public bool chargingBall= false;
     public string key;
+
     void Shoot(float Charging)
     {
-
         var fireball = Instantiate(fireBallPrefab,fireShoot.position,fireShoot.rotation);
         fireball.GetComponent<fireBall>().SetTime(Charging);
     }

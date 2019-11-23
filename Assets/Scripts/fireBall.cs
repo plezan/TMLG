@@ -34,7 +34,7 @@ public class fireBall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if(time > charge*2.5)
+        if(time > charge*2.5 && collision.name.Contains("Tile"))
         {
             if (collision.name == "Tile(Clone)")
             {
