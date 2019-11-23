@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: ca0f0b405ca173346b69cbc7dd4ea438
 =======
 guid: bbc9e55e36eb0124ca57956013c33bcd
@@ -8,6 +9,13 @@ guid: bbc9e55e36eb0124ca57956013c33bcd
 =======
 >>>>>>> 1925022b4050baa2d1e85982e33feb8f95a86e1b
 >>>>>>> 659b33634e168754afdfb940c7f23a1b7c74593d
+=======
+<<<<<<< Updated upstream
+guid: 0b87bd0682f225842b3efac05f418b2d
+=======
+guid: ca0f0b405ca173346b69cbc7dd4ea438
+>>>>>>> Stashed changes
+>>>>>>> Amir
 TextScriptImporter:
   externalObjects: {}
   userData: 

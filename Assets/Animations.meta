@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 1fb56a61e6588744c82ec47b84edca51
+=======
+<<<<<<< Updated upstream
+guid: c4eec6242afe86a4ba30c055f4ea78f4
+=======
+guid: 1fb56a61e6588744c82ec47b84edca51
+>>>>>>> Stashed changes
+>>>>>>> Amir
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

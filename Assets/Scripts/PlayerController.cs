@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
-
     public float speed;
     public float jump;
     public float rayCheckLength;
@@ -29,6 +28,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
         }
     }
+
 
     bool isGrounded()
     {
