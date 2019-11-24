@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -12,6 +13,9 @@ public class Weapon : MonoBehaviour
     public bool chargingBall= false;
     public string fireKey;
     public string waterKey;
+
+    private bool watering = false;
+    private float waterCharge = 0;
 
     void Shoot(float Charging)
     {
@@ -34,20 +38,34 @@ public class Weapon : MonoBehaviour
         {
             charge += Time.deltaTime;
         }
-        if(Input.GetButtonDown(fireKey))
+        if (watering)
+        {
+            waterCharge += Time.deltaTime;
+        }
+        if (Input.GetButtonDown(fireKey))
         {
             charge += Time.deltaTime;
             chargingBall = true;
+            fireShoot.parent.GetComponent<Animator>().SetBool("isHolding", true);
         }
         if (Input.GetButtonUp(fireKey))
         {
             chargingBall = false;
             Shoot(charge);
             charge = 0;
+            fireShoot.parent.GetComponent<Animator>().SetBool("isHolding", false);
         }
-        if (Input.GetButtonDown(waterKey))
+        if (Input.GetButtonDown(waterKey) && !watering)
         {
             Shield();
+            waterShoot.parent.GetComponent<Animator>().SetBool("isWatering", true);
+            watering = true;
+        }
+        if (waterCharge >= 2)
+        {
+            waterShoot.parent.GetComponent<Animator>().SetBool("isWatering", false);
+            waterCharge = 0;
+            watering = false;
         }
     }
 }

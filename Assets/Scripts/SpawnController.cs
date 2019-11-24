@@ -8,6 +8,7 @@ public class SpawnController : MonoBehaviour
     public int nbPlayer = 2;
     public GameObject playerPrefab;
     public Transform[] spawns;
+    public RuntimeAnimatorController[] animations;
 
     GameObject[] players;
 
@@ -22,6 +23,7 @@ public class SpawnController : MonoBehaviour
             PlayerController pc = players[i].GetComponent<PlayerController>();
             pc.HorizontalAxis = "p"+(i+1)+"_Horizontal";
             pc.VerticalAxis = "p"+(i+1)+"_Vertical";
+            players[i].GetComponent<Animator>().runtimeAnimatorController = animations[i];
 
             Weapon wp = players[i].GetComponent<Weapon>();
             wp.fireKey = "p" + (i + 1) + "_Action1";

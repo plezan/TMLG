@@ -2232,6 +2232,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478683498193654901, guid: d639b683aa1f09f41a0ac0711e7072f6,
         type: 3}
+      propertyPath: animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478683498193654901, guid: d639b683aa1f09f41a0ac0711e7072f6,
+        type: 3}
       propertyPath: spawns.Array.data[0]
       value: 
       objectReference: {fileID: 1301871902}
@@ -2263,6 +2268,18 @@ PrefabInstance:
       propertyPath: fire
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6478683498193654901, guid: d639b683aa1f09f41a0ac0711e7072f6,
+        type: 3}
+      propertyPath: animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 22100000, guid: e0b92c774cffc194c99c954059ea7ace,
+        type: 2}
+    - target: {fileID: 6478683498193654901, guid: d639b683aa1f09f41a0ac0711e7072f6,
+        type: 3}
+      propertyPath: animations.Array.data[1]
+      value: 
+      objectReference: {fileID: 22100000, guid: 192ce59958f414847a490918359b9c3c,
+        type: 2}
     - target: {fileID: 6478683498474652605, guid: d639b683aa1f09f41a0ac0711e7072f6,
         type: 3}
       propertyPath: m_Name

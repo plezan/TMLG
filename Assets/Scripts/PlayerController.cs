@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     public string VerticalAxis;
     Rigidbody2D rb;
 
+    private Animator anim;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = this.GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -26,6 +29,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis(VerticalAxis) > 0 && isGrounded())
         {
             rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+        }
+
+        if (!isGrounded() && !anim.GetBool("isJumping"))
+        {
+            anim.SetBool("isJumping", true);
+            
+        }
+        else if(isGrounded() && anim.GetBool("isJumping"))
+        {
+            anim.SetBool("isJumping", false);
         }
     }
 
