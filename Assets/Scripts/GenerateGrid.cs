@@ -11,8 +11,8 @@ public class GenerateGrid : MonoBehaviour
     public float HEIGHTOFTILE = 0.4f;
     public float WIDTHOFTILE = 0.4f;
     public GameObject tilePrefab;
-    public GameObject jaugePrefab;
-    GameObject myJauge;
+    // public GameObject jaugePrefab;
+    public GameObject myJauge;
 
     public float UPLEFTCORNER_X = -8.54f;
     public float UPLEFTCORNER_Y = 4.84f;
@@ -73,8 +73,8 @@ public class GenerateGrid : MonoBehaviour
         Debug.Log("PourcentageVie " + GetPourcentageVie());
 
 
-        myJauge = Instantiate(jaugePrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z  - 10), Quaternion.identity);
-        myJauge.transform.SetParent(gameObject.transform);
+        //myJauge = Instantiate(jaugePrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z  - 10), Quaternion.identity);
+        //myJauge.transform.SetParent(gameObject.transform);
         myJauge.GetComponent<Animator>().SetInteger("StateJauge", StateTapestry());
 
 
@@ -105,8 +105,8 @@ public class GenerateGrid : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log("GetPourcentageVie : " + GetPourcentageVie());
-        Debug.Log("Statetapestry " + StateTapestry());
+        //Debug.Log("GetPourcentageVie : " + GetPourcentageVie());
+        //Debug.Log("Statetapestry " + StateTapestry());
         myJauge.GetComponent<Animator>().SetInteger("StateJauge", StateTapestry());
 
     }
