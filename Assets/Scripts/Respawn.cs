@@ -12,7 +12,7 @@ public class Respawn : MonoBehaviour
         if (other.name.Contains("Player"))
         {
             float x = SelectedPlayer.transform.position.x;
-            float y = 22;
+            float y = 19;
             float z = SelectedPlayer.transform.position.z;
             SelectedPlayer.transform.SetPositionAndRotation(new Vector3(x, y, z), new Quaternion(0,0,0,0));
         }

@@ -154,9 +154,9 @@ MonoBehaviour:
     type: 3}
   fireBallPrefab: {fileID: 5456400605372952011, guid: 3c4becd4b0834c34898c062d00329edb,
     type: 3}
-  waterShoot: {fileID: 807482767805739228, guid: ebde6c4acaee4e44ea2558360ff5f6e8,
+  waterShoot: {fileID: 2581271434194741427, guid: ebde6c4acaee4e44ea2558360ff5f6e8,
     type: 3}
-  waterShielPrefab: {fileID: 807482767805739227, guid: ebde6c4acaee4e44ea2558360ff5f6e8,
+  waterShielPrefab: {fileID: 4430501363452085531, guid: ebde6c4acaee4e44ea2558360ff5f6e8,
     type: 3}
   charge: 0
   chargingBall: 0

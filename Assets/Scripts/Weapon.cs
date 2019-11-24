@@ -16,6 +16,7 @@ public class Weapon : MonoBehaviour
     void Shoot(float Charging)
     {
         fireShoot.SetPositionAndRotation(new Vector3(fireShoot.position.x, fireShoot.position.y, -10), fireShoot.rotation);
+   
         var fireball = Instantiate(fireBallPrefab, fireShoot.position, fireShoot.rotation);
         fireball.GetComponent<fireBall>().SetTime(Charging);
     }

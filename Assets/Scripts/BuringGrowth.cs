@@ -6,6 +6,11 @@ public class BuringGrowth : MonoBehaviour
 {
     public float time = 0;
     public string tileName = "Tile(Clone)";
+    private string wallNName = "WallNorth";
+    private string wallSName = "WallSouth";
+    private string wallWName = "WallWest";
+    private string wallEName = "WallEast";
+    private string wallCName = "WallCenter";
     private bool isBurning = true;
 
     // Start is called before the first frame update
@@ -20,7 +25,7 @@ public class BuringGrowth : MonoBehaviour
         if (isBurning)
         {
             time += Time.deltaTime;
-            gameObject.transform.localScale += new Vector3(0.001f * time / 10, 0.001f * time / 10, 0);
+            gameObject.transform.localScale += new Vector3(0.001f * time / 5, 0.001f * time / 5, 0);
             Collider2D col = gameObject.GetComponent<Collider2D>();
         } 
 
@@ -33,6 +38,10 @@ public class BuringGrowth : MonoBehaviour
         {
             TileTrigger mygrid = collision.GetComponent<TileTrigger>();
             mygrid.disableTile();
+        }
+        if (collision.name == wallEName || collision.name == wallNName || collision.name == wallSName || collision.name == wallWName || collision.name == wallCName)
+        {
+            isBurning = false;
         }
     }
 

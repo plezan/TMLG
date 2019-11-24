@@ -166,5 +166,5 @@ MonoBehaviour:
   rb: {fileID: 4424963303964405156}
   charge: 0
   time: 0
-  burningPrefab: {fileID: 8074936656967171915, guid: 2ec7d515e4a72a449a69a8c822396b90,
+  burningPrefab: {fileID: 3706892968076051254, guid: 2ec7d515e4a72a449a69a8c822396b90,
     type: 3}
