@@ -15,6 +15,8 @@ public class GenerateGrid : MonoBehaviour
     // public GameObject jaugePrefab;
     public GameObject myJauge;
     public GameObject myText;
+    public GameObject myLunettes;
+    public GameObject victory;
 
     public float UPLEFTCORNER_X = -8.54f;
     public float UPLEFTCORNER_Y = 4.84f;
@@ -24,6 +26,8 @@ public class GenerateGrid : MonoBehaviour
     int nbTotalTile;
     int nbTileActive;
     int nbTotalTile80;
+
+    bool isWinning = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -111,6 +115,18 @@ public class GenerateGrid : MonoBehaviour
         //Debug.Log("Statetapestry " + StateTapestry());
         myJauge.GetComponent<Animator>().SetInteger("StateJauge", StateTapestry());
         myText.GetComponent<TextMeshPro>().text = GetPourcentageVie().ToString();
+
+        if (StateTapestry() == 0 && !isWinning)
+        {
+            myLunettes.GetComponent<SpriteRenderer>().enabled = true;
+            victory.GetComponent<SpriteRenderer>().enabled = true;
+            isWinning = true;
+        }
+        if (isWinning)
+        {
+            Time.timeScale = 0;
+
+        }
 
     }
 
