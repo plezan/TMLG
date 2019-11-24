@@ -11,18 +11,23 @@ public class GenerateGrid : MonoBehaviour
     public float HEIGHTOFTILE = 0.4f;
     public float WIDTHOFTILE = 0.4f;
     public GameObject tilePrefab;
+    public GameObject jaugePrefab;
+    GameObject myJauge;
 
     public float UPLEFTCORNER_X = -8.54f;
     public float UPLEFTCORNER_Y = 4.84f;
     const float UPLEFTCORNER_Z = -5.0f;
+    public int pourcentageToWin = 80;
 
-    int total;
+    int nbTotalTile;
+    int nbTileActive;
+    int nbTotalTile80;
 
     // Start is called before the first frame update
     void Awake()
     {
 
-        total = 0;
+        nbTotalTile = 0;
 
         // GameObject tile = Instantiate(tilePrefab, new Vector3(UPLEFTCORNER_X, UPLEFTCORNER_Y, UPLEFTCORNER_Z), Quaternion.identity);
         ArrayList currentColumn;
@@ -40,7 +45,7 @@ public class GenerateGrid : MonoBehaviour
                 float newY = UPLEFTCORNER_Y - (currentColumn.Count * WIDTHOFTILE);
                 GameObject tile;
                 currentColumn.Add( tile = Instantiate(tilePrefab, new Vector3(newX, newY, UPLEFTCORNER_Z), Quaternion.identity));
-                total++;
+                nbTotalTile++;
                 tile.transform.parent = gameObject.transform;
             }
 
@@ -63,21 +68,55 @@ public class GenerateGrid : MonoBehaviour
             }
             return false;
         }
+        nbTotalTile80=(nbTotalTile * pourcentageToWin) / 100;
+        nbTileActive = nbTotalTile80;
+        Debug.Log("PourcentageVie " + GetPourcentageVie());
+
+
+        myJauge = Instantiate(jaugePrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z  - 10), Quaternion.identity);
+        myJauge.transform.SetParent(gameObject.transform);
+        myJauge.GetComponent<Animator>().SetInteger("StateJauge", StateTapestry());
+
+
 
     }
 
+
     public int GetNumberOfTiles()
     {
-        return total;
+        return nbTileActive;
     }
 
     public int DecreaseNumberOfTiles()
     {
-        if (total > 0)
+        if (nbTileActive > 0)
         {
-            total -= 1;
+            nbTileActive-= 1;
         }
-        return total;
+        return nbTileActive;
     }
+
+    public int GetPourcentageVie()
+    {
+        
+        return (int)(((double)nbTileActive / (double)nbTotalTile80) * 100);
+    }
+
+    private void Update()
+    {
+
+        Debug.Log("GetPourcentageVie : " + GetPourcentageVie());
+        Debug.Log("Statetapestry " + StateTapestry());
+        myJauge.GetComponent<Animator>().SetInteger("StateJauge", StateTapestry());
+
+    }
+
+    public int StateTapestry()
+    {
+        return ((GetPourcentageVie()) / 10);
+    }
+
+
+
 
 }
