@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GenerateGrid : MonoBehaviour
@@ -13,6 +14,7 @@ public class GenerateGrid : MonoBehaviour
     public GameObject tilePrefab;
     // public GameObject jaugePrefab;
     public GameObject myJauge;
+    public GameObject myText;
 
     public float UPLEFTCORNER_X = -8.54f;
     public float UPLEFTCORNER_Y = 4.84f;
@@ -108,6 +110,7 @@ public class GenerateGrid : MonoBehaviour
         //Debug.Log("GetPourcentageVie : " + GetPourcentageVie());
         //Debug.Log("Statetapestry " + StateTapestry());
         myJauge.GetComponent<Animator>().SetInteger("StateJauge", StateTapestry());
+        myText.GetComponent<TextMeshPro>().text = GetPourcentageVie().ToString();
 
     }
 
