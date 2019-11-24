@@ -271,7 +271,7 @@ MonoBehaviour:
   maxX: 7
   minY: 2
   maxY: 17
-  plateCount: 20
+  plateCount: 50
 --- !u!1 &411767402
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +984,7 @@ MonoBehaviour:
   maxX: 7
   minY: 2
   maxY: 17
-  plateCount: 20
+  plateCount: 50
 --- !u!1 &1097300884
 GameObject:
   m_ObjectHideFlags: 0
