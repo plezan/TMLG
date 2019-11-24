@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GenerateGrid : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class GenerateGrid : MonoBehaviour
     public GameObject myText;
     public GameObject myLunettes;
     public GameObject victory;
-
+    
     public float UPLEFTCORNER_X = -8.54f;
     public float UPLEFTCORNER_Y = 4.84f;
     const float UPLEFTCORNER_Z = -5.0f;
@@ -125,7 +126,6 @@ public class GenerateGrid : MonoBehaviour
         if (isWinning)
         {
             Time.timeScale = 0;
-
         }
 
     }
