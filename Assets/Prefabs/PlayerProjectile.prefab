@@ -104,13 +104,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208edd4d0b0322d46bd50ffb02f329f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireShoot: {fileID: 5456400605372952012, guid: 3c4becd4b0834c34898c062d00329edb,
+  fireShoot: {fileID: 6040857950796964241, guid: ab01e0cad9b987b4e91766b9ab4f3a91,
     type: 3}
-  fireBallPrefab: {fileID: 5456400605372952011, guid: 3c4becd4b0834c34898c062d00329edb,
+  fireBallPrefab: {fileID: 6040857950796964246, guid: ab01e0cad9b987b4e91766b9ab4f3a91,
     type: 3}
-  waterShoot: {fileID: 2581271434194741427, guid: ebde6c4acaee4e44ea2558360ff5f6e8,
+  waterShoot: {fileID: 1363050275214046307, guid: 5e010fcf789891e4d9f021a550207551,
     type: 3}
-  waterShielPrefab: {fileID: 4430501363452085531, guid: ebde6c4acaee4e44ea2558360ff5f6e8,
+  waterShielPrefab: {fileID: 1363050275214046308, guid: 5e010fcf789891e4d9f021a550207551,
     type: 3}
   charge: 0
   chargingBall: 0
