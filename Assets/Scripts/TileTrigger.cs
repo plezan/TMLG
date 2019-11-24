@@ -26,9 +26,8 @@ public class TileTrigger : MonoBehaviour
         if (collision.name == burning.name+"(Clone)")
         {
             
-            print("Triger triggered");
             gameObject.GetComponentInParent<GenerateGrid>().DecreaseNumberOfTiles();
-            Debug.Log(gameObject.GetComponentInParent<GenerateGrid>().GetNumberOfTiles());
+
             disableTile();
         }
 
